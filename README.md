@@ -25,4 +25,9 @@
 ### Tomato 1  
 - do more of bounds tests
 - single asset rule (can have two assert if you are testing the same logic)
+- avoid the try - have a function/wrapper that catchs it 
+- type safe exception, languange have abandoned it
+- type safety and exceptions violates dependency inversion principle because high level abstractions need to focus on details from way down inside, low level details have to bubble up the errors all the way up
+- hight level should dominate low level
+
 
