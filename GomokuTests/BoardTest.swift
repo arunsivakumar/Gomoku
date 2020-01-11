@@ -29,14 +29,16 @@ class BoardTest: XCTestCase {
     }
     
     func testKnowsAboutEmptyIntersections() throws {
-        XCTAssertEqual(Player.empty, try board.get(intersection: Intersection(0,1)))
+        let emptyIntersection = Intersection(0,1)
+        XCTAssertEqual(Player.empty, try board.get(intersection: emptyIntersection))
         try board.place(intersection: Intersection(0,1), player: .white)
-        XCTAssertEqual(Player.white, try board.get(intersection: Intersection(0,1)))
+        XCTAssertEqual(Player.white, try board.get(intersection: emptyIntersection))
     }
     
     func testCannotAddToOccupiedIntersections() throws {
         try board.place(row: 0, column: 0, player: .white)
         
+        XCTAssertThrowsError(try board.place(intersection: Intersection(0, 0), player: .black))
         XCTAssertThrowsError(try board.place(intersection: Intersection(0, 0), player: .black))
         XCTAssertThrowsError(try board.place(intersection: Intersection(0, 0), player: .white))
     }
