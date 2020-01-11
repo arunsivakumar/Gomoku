@@ -24,4 +24,5 @@
 ## 2. Proceeding with Precision
 ### Tomato 1  
 - do more of bounds tests
+- single asset rule (can have two assert if you are testing the same logic)
 

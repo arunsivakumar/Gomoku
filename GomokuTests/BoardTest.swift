@@ -10,20 +10,22 @@ class BoardTest: XCTestCase {
     }
     
     func testNewBoardHasNoStones() {
-        
         let stones = board.stonesPlaced()
         XCTAssertEqual(0, stones)
     }
     
-    func testCanAddOneStone() throws {
-        let row = 1
-        let col = 1
-        let player = Player.white
-        try board.place(row: row, column: col, player: player)
+    func testCanAddOneStonesInBounds() throws {
+        try board.place(row: 1, column: 1, player: Player.white)
         XCTAssertEqual(1, board.stonesPlaced())
         
-        let placedStone = try board.get(row: row, column: col)
+        var placedStone = try board.get(row: 1, column: 1)
         XCTAssertEqual(Player.white, placedStone)
+        
+        try board.place(row: board.WIDTH-1, column: board.HEIGHT-1, player: Player.black)
+        XCTAssertEqual(2, board.stonesPlaced())
+        
+        placedStone = try board.get(row: board.HEIGHT-1, column: board.WIDTH-1)
+        XCTAssertEqual(Player.black, placedStone)
     }
     
     func testKnowsAboutEmptyIntersections() throws {
