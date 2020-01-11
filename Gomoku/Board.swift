@@ -9,6 +9,11 @@ enum Player {
 class SpaceOccupied: Error {
     
 }
+
+class BadLocation: Error {
+    
+}
+
 class Board {
     
     let WIDTH = 19
@@ -21,19 +26,22 @@ class Board {
     }
     
     func place(row: Int, column: Int, player: Player) throws {
-        let loc = makeLocation(row: row, column: column)
+        let loc = try makeLocation(row: row, column: column)
         if placedStones[loc] != nil {
             throw SpaceOccupied()
         }
         placedStones[loc] = player
     }
     
-    func makeLocation(row: Int, column: Int) -> Int {
+    func makeLocation(row: Int, column: Int) throws -> Int {
+        if row < 0 || row >= HEIGHT || column < 0 || column >= HEIGHT {
+            throw BadLocation()
+        }
         return column * WIDTH + row
     }
     
-    func get(row: Int, column: Int) -> Player {
-        let loc = makeLocation(row: row, column: column)
+    func get(row: Int, column: Int) throws -> Player {
+        let loc = try makeLocation(row: row, column: column)
         if let stone = placedStones[loc] {
             return stone
         } else {
