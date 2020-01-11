@@ -13,8 +13,10 @@
 		F456E30B23CA172000A4C8DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456E30923CA172000A4C8DA /* Main.storyboard */; };
 		F456E30D23CA172200A4C8DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F456E30C23CA172200A4C8DA /* Assets.xcassets */; };
 		F456E31023CA172200A4C8DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456E30E23CA172200A4C8DA /* LaunchScreen.storyboard */; };
-		F456E31B23CA172200A4C8DA /* GomokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456E31A23CA172200A4C8DA /* GomokuTests.swift */; };
 		F456E32623CA172200A4C8DA /* GomokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456E32523CA172200A4C8DA /* GomokuUITests.swift */; };
+		F456E33423CA181E00A4C8DA /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456E33323CA181E00A4C8DA /* BoardTest.swift */; };
+		F456E33623CA189F00A4C8DA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456E33523CA189F00A4C8DA /* Board.swift */; };
+		F456E33823CA1A1100A4C8DA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F456E33723CA1A1100A4C8DA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +46,13 @@
 		F456E30F23CA172200A4C8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F456E31123CA172200A4C8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F456E31623CA172200A4C8DA /* GomokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F456E31A23CA172200A4C8DA /* GomokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuTests.swift; sourceTree = "<group>"; };
 		F456E31C23CA172200A4C8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F456E32123CA172200A4C8DA /* GomokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456E32523CA172200A4C8DA /* GomokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuUITests.swift; sourceTree = "<group>"; };
 		F456E32723CA172200A4C8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F456E33323CA181E00A4C8DA /* BoardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTest.swift; sourceTree = "<group>"; };
+		F456E33523CA189F00A4C8DA /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		F456E33723CA1A1100A4C8DA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		F456E2F723CA171F00A4C8DA = {
 			isa = PBXGroup;
 			children = (
+				F456E33723CA1A1100A4C8DA /* README.md */,
 				F456E30223CA171F00A4C8DA /* Gomoku */,
 				F456E31923CA172200A4C8DA /* GomokuTests */,
 				F456E32423CA172200A4C8DA /* GomokuUITests */,
@@ -106,6 +111,7 @@
 				F456E30C23CA172200A4C8DA /* Assets.xcassets */,
 				F456E30E23CA172200A4C8DA /* LaunchScreen.storyboard */,
 				F456E31123CA172200A4C8DA /* Info.plist */,
+				F456E33523CA189F00A4C8DA /* Board.swift */,
 			);
 			path = Gomoku;
 			sourceTree = "<group>";
@@ -113,8 +119,8 @@
 		F456E31923CA172200A4C8DA /* GomokuTests */ = {
 			isa = PBXGroup;
 			children = (
-				F456E31A23CA172200A4C8DA /* GomokuTests.swift */,
 				F456E31C23CA172200A4C8DA /* Info.plist */,
+				F456E33323CA181E00A4C8DA /* BoardTest.swift */,
 			);
 			path = GomokuTests;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 					};
 					F456E31523CA172200A4C8DA = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 						TestTargetID = F456E2FF23CA171F00A4C8DA;
 					};
 					F456E32023CA172200A4C8DA = {
@@ -234,6 +241,7 @@
 			files = (
 				F456E31023CA172200A4C8DA /* LaunchScreen.storyboard in Resources */,
 				F456E30D23CA172200A4C8DA /* Assets.xcassets in Resources */,
+				F456E33823CA1A1100A4C8DA /* README.md in Resources */,
 				F456E30B23CA172000A4C8DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +269,7 @@
 			files = (
 				F456E30823CA172000A4C8DA /* ViewController.swift in Sources */,
 				F456E30423CA172000A4C8DA /* AppDelegate.swift in Sources */,
+				F456E33623CA189F00A4C8DA /* Board.swift in Sources */,
 				F456E30623CA172000A4C8DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F456E31B23CA172200A4C8DA /* GomokuTests.swift in Sources */,
+				F456E33423CA181E00A4C8DA /* BoardTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +478,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -479,6 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arunsivakumar.GomokuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
@@ -490,6 +501,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
