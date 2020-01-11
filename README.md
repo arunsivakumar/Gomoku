@@ -11,4 +11,11 @@
 - Start with  a board 
 ### Tomato 2 - Simulator sadness
 - test should run in any order
+### Tomato 3 - More tests
+- validate base cases like return column * WIDTH + row 
 
+*testNewBoardHasNoStones*  
+*testCanAddOneStone*  
+*testKnowsAboutEmptyIntersections*  
+*testCannotAddToOccupiedIntersections*  
+*testCannotPlaceStonesOutsideBounds*  
