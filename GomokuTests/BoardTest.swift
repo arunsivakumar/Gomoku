@@ -30,21 +30,22 @@ class BoardTest: XCTestCase {
         XCTAssertEqual(Player.empty, try board.get(row: 0, column: 1))
         try board.place(row: 0, column: 1, player: .white)
         XCTAssertEqual(Player.white, try board.get(row: 0, column: 1))
-
     }
     
     func testCannotAddToOccupiedIntersections() throws {
         try board.place(row: 0, column: 0, player: .white)
         
         XCTAssertThrowsError(try board.place(row: 0, column: 0, player: .black))
-
+        XCTAssertThrowsError(try board.place(row: 0, column: 0, player: .white))
     }
     
     func testCannotPlaceStonesOutsideBounds() throws {
-        XCTAssertThrowsError(try board.place(row: 42, column: 42, player: .white))
-
+        XCTAssertThrowsError(try board.place(row: -1, column: -1, player: .white))
+        XCTAssertThrowsError(try board.place(row: board.WIDTH, column: board.HEIGHT, player: .white))
+        XCTAssertThrowsError(try board.place(row: 0, column: -1, player: .white))
+        XCTAssertThrowsError(try board.place(row: 0, column: board.HEIGHT, player: .white))
+        XCTAssertThrowsError(try board.place(row: -1, column: 0, player: .white))
+        XCTAssertThrowsError(try board.place(row: board.WIDTH, column: 0, player: .white))
+        XCTAssertEqual(0, board.stonesPlaced())
     }
-
-    
-    
 }

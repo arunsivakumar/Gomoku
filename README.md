@@ -6,7 +6,7 @@
 2. Write only enough test code as is sufficient enough to fail 
 3. Only implement a minimal code that makes the failing test pass.
 
-## Getting Started
+## 1. Getting Started
 ### Tomato 1  
 - Start with  a board 
 ### Tomato 2 - Simulator sadness
@@ -19,3 +19,9 @@
 *testKnowsAboutEmptyIntersections*  
 *testCannotAddToOccupiedIntersections*  
 *testCannotPlaceStonesOutsideBounds*  
+
+
+## 2. Proceeding with Precision
+### Tomato 1  
+- do more of bounds tests
+
