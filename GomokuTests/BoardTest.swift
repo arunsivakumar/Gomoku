@@ -26,5 +26,12 @@ class BoardTest: XCTestCase {
         XCTAssertEqual(Player.white, placedStone)
     }
     
+    func testKnowsAboutEmptyIntersections() {
+        XCTAssertEqual(Player.empty, board.get(row: 0, column: 1))
+        board.add(row: 0, column: 1, player: .white)
+        XCTAssertEqual(Player.white, board.get(row: 0, column: 1))
+
+    }
+    
     
 }
